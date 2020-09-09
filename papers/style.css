@@ -1,0 +1,145 @@
+body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin: 2em 4em 4em 4em;
+	overflow-y: scroll;
+}
+
+h1 {
+	margin-top: 0em;
+	margin-bottom: 0.5em;
+	font-style: bold;
+	text-shadow: 3px 3px 5px #ccc
+}
+
+h2 {
+	margin-top: 1em;
+	font-style: normal;
+	font-size: 150%
+}
+
+h3 {
+	margin-top: 1em;
+	font-style: normal;
+}
+
+ul {
+	margin: 0ex 0ex 0ex 0ex;
+	padding-left: 2em;
+}
+
+ul.top {
+	margin: 0ex 0ex 1ex -2ex;
+	padding-left: 2em;
+}
+
+ul.sub {
+	margin: 1ex 5ex 1ex 0ex;
+	padding-left: 2em;	
+}
+
+ul.nobullet {
+	margin: 1ex 5ex 1ex 0ex;
+	padding-left: 2em;
+	list-style: none;
+}
+
+ul li {
+	margin: 0ex 0ex 0.5ex 0ex;
+	padding: 0;
+	text-align: justify;
+}
+
+ul.top li {
+	margin: 0ex 0ex 0.8ex 0ex;
+	padding: 0;
+	text-align: justify;
+}
+
+ul.sub li {
+	margin: 0ex 0ex 0.5ex 0ex;
+	padding: 0;
+	text-align: justify;
+}
+
+ul.nobullet li {
+	margin: 0ex 0ex 0.5ex 0ex;
+	padding: 0;
+	text-align: justify;
+}
+
+ul li.emph {
+	background-image: -webkit-radial-gradient(40% 50%, #fdf, #efeffb);
+}
+
+
+
+ol {
+	margin: 2ex 5ex 2ex 0ex;
+	padding-left: 2em;
+}
+
+ol.top {
+	margin: 0ex 0ex 1ex -2ex;
+	padding-left: 2em;
+}
+
+ol.sub {
+	margin: 1ex 5ex 1ex 0ex;
+	padding-left: 2em;	
+}
+
+ol.nobullet {
+	margin: 1ex 5ex 1ex 0ex;
+	padding-left: 2em;
+	list-style: none;
+}
+
+ol li {
+	margin: 0ex 0ex 1ex 0ex;
+	padding: 0;
+	text-align: justify;
+}
+
+ol.sub li {
+	margin: 0ex 0ex 0.5ex 0ex;
+	padding: 0;
+	text-align: justify;
+}
+
+ol.nobullet li {
+	margin: 0ex 0ex 0.5ex 0ex;
+	padding: 0;
+	text-align: justify;
+}
+
+ol li.emph {
+	background-image: -webkit-radial-gradient(40% 50%, #fdf, #efeffb);
+}
+
+
+dt {
+	display: block;
+	float: left;
+	clear: left;
+	width: 8.5em;
+	padding: 0.5ex 0.5em 0 0.5em;
+	text-align: right;
+	font-weight: bold;
+}
+
+dt.emph {
+	background-image: -webkit-radial-gradient(20% 50%, #fdf, #efeffb);
+}
+
+
+dd {
+	display: block;
+	margin: 0 0 0 9.5em;
+	padding: 0.5ex 0.5em;
+	border-left: 1px solid #888;
+	text-align: justify;
+}
+
+dd.emph {
+	background-image: -webkit-radial-gradient(40% 49%, #fdf, #efeffb);
+}
