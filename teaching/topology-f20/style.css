@@ -71,7 +71,9 @@ ul li.emph {
 	background-image: -webkit-radial-gradient(40% 50%, #fdf, #efeffb);
 }
 
-
+mark {
+	background-image: -webkit-radial-gradient(40% 50%, #fdf, #efeffb);
+}
 
 ol {
 	margin: 2ex 5ex 2ex 0ex;
@@ -142,4 +144,37 @@ dd {
 
 dd.emph {
 	background-image: -webkit-radial-gradient(40% 49%, #fdf, #efeffb);
+}
+
+div.floater {
+	background-color: white;
+	margin: 0ex 0ex 4ex 4ex;
+	padding: 1ex;
+	clear: right;
+	float: right;
+	font-size: 75%;
+	text-align: center;
+	border: 1px solid #eee;
+	box-shadow: 2px 2px 6px #447;
+	-moz-box-shadow: 2px 2px 6px #447;
+	-webkit-box-shadow: 2px 2px 6px #447;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+div.floaterjeff {
+	background-color: white;
+	margin: 0ex 0ex 4ex 4ex;
+	padding: 1ex;
+	clear: right;
+	float: right;
+	font-size: 75%;
+	font-style: italic;
+	text-align: center;
+	border: 1px solid #eee;
+	box-shadow: 2px 2px 6px #444;
+	-moz-box-shadow: 2px 2px 6px #444;
+	-webkit-box-shadow: 2px 2px 6px #444;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
 }
