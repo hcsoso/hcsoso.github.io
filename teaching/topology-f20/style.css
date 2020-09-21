@@ -155,9 +155,9 @@ div.floater {
 	font-size: 75%;
 	text-align: center;
 	border: 1px solid #eee;
-	box-shadow: 2px 2px 6px #447;
-	-moz-box-shadow: 2px 2px 6px #447;
-	-webkit-box-shadow: 2px 2px 6px #447;
+	box-shadow: 2px 2px 6px #77777d;
+	-moz-box-shadow: 2px 2px 6px #77777d;
+	-webkit-box-shadow: 2px 2px 6px #77777d;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 }
