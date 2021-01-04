@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html>
+<head>
+<title>Introduction to Computational Topology (Fall 2020)</title>
+<style type=text/css>
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline;}
+</style>
+<link href="style.css" rel="stylesheet">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+</head>
+
+<body text=#1C1C1C vLink=#0431B4 link=#0431B4 bgColor=#EFEFFB background="">
+<!--
+<p>
+<table border=0 align=center>
+<tr valign=top style="line-height: 1.2">
+<td width=10></td>
+<td width=600>
+-->
+
+<h1>Theory of Computation</h1>
+<h3>COSC 39, Winter 2021</h3>
+
+<h3 align=right><a href="index.html">Main</a> | <a href="schedule.html">Schedule</a> | <a href="homeworks.html">Homeworks</a> | About</h3>
+
+
+<hr width=100%>
+
+<h2 id="about"> About the course </h2>
+
+<p>
+Computers, capable of performing universal computations and simulating other computers, is one of the greatest achievements of human civilization. One of the key components is the ability to abstract and formalize computation itself as a concrete mathematical object, called the <em>Turing machine</em>. Surprisingly, such definition is sufficiently robust that any attempts to formalize computation end up arriving at definitions provably equivalent to Turing machines, which encapsulate all the physical computing devices known to human beings. 
+</p>
+
+<p>
+While the whole discipline has been growing explosively for the past several decades, many important questions regarding the fundamental principle of computation remain unanswered; this includes the <em>P versus NP</em>, one of the Millennium Prize Problems that resists all attempts to be solved despite serious attempts from the most brilliant minds. 
+</p>
+
+<p>
+In this course we will study computation through the abstract lenses of Turing machines (including their variations), the benefit of knowing computations from a theoretical perspective, and how they relate to the rest of computer science.
+</p>
+
+<h3>Prerequisite</h3>
+<p>
+A proof-based course like COSC 30: Discrete Mathematics or equivalent is required as prerequisite. Alternatively, students with reasonable mathematical background and maturity, in particular the ability to follow arguments of a proof, are welcome to take the course with instructor’s permission. 
+We will hand out homework 0 in the first week to give the students an idea of thebackground knowledge and skills expected.
+</p>
+
+<h3>Related Courses</h3>
+<ul>
+<li>
+<em>COSC 40 Computational Complexity</em>: This is the sequel of COSC 39. The theory of computational complexity aims at studying and classifying computational problems using reductions based on their difficulties — the various resources needed to solve the problem.2 Connections between problems help us to identify central problems of study, whose breakthrough often comes with development of new insights and techniques.
+
+<li>
+<em>COSC 31 Algorithms<em>: This is the flip side ofCOSC 39. Algorithms are ubiquitous in computer science; this course focuses on the design and analysis of (mostly classical) algorithms, with similar emphasis on the development of rigorous and unambiguous ways of communicating ideas. Both courses will prepare you for a similar skill set that is necessary for any future career related to computer science. Unlike COSC 39 and 40, the goal of algorithms is to actually solve the problems (at least with (lots of) simplifying assumptions3).
+</ul>
+
+
+<hr width=100%>
+
+<h2 id="textbook"> Textbook and References </h2>
+
+<p>
+There is no required textbook. We will use the following book and lecture notes as our main reference: 
+<ul>
+<li>
+Michael Sipser, <em>Introduction to the Theory of Computation</em>. Either the 2nd or 3rd edition is fine.
+<li>
+Jeff Erickson, <em><a href="https://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf" target="_blank">Models of Computation</a></em>
+</ul>
+</p>
+
+<p>
+We will also use a mix of books and class notes listed below as references. Additional relevant reading materials will be linked on the course webpage each week.
+</p>
+<ul>
+<li>
+Sanjeev Arora and Boaz Barak, <em>Computational Complexity: A Modern Approach</em>
+<li>
+Michael Garey and David Johnson, <em>Computers and Intractability</em>
+<li>
+John E. Hopcroft and Jeffrey D. Ullman, <em>Introduction to Automata Theory, Languages and Computation (1st edition)</em>
+<li>
+Cristopher Moore and Stephan Mertens, <em>The Nature of Computation</em>
+<li>
+Christos Papadimitriou, <em>Computational Complexity</em>
+</ul>
+
+
+<hr width=100%>
+
+
+<h2>Related Courses</h2>
+
+<p>	
+Here is an (vastly incomplete) list of similar/related courses offered by other instructors.  
+</p>
+
+<ul>
+<li>
+H. Conrad Cunningham, <em><a href="https://john.cs.olemiss.edu/~hcc/csci311/notes/311lectureNotes.html" target="_blank">Models of Computation</a></em>, Dec 2015
+<li>
+Margaret Fleck and Sariel Har-Peled, <em><a href="https://sarielhp.org/teach/notes/373/book.pdf" target="_blank">Models of Computation</a></em>, May 2009
+<li>
+Jean Gallier, <em><a href="https://www.cis.upenn.edu/~cis262/notes/tcbook-u.pdf" target="_blank">Introduction to the Theory of Computation</a></em>, Dec 2017 
+<li>
+Michael Levet, <em><a href="https://people.math.sc.edu/mlevet/Lecture_Notes.pdf" target="_blank">Theory of Computation</a></em>, Aug 2019 
+<li>
+Sriram Sankaranarayanan, <em><a href="https://www.cs.colorado.edu/~srirams/courses/toc-fall15/" target="_blank">Introduction to the Theory of Computation</a></em>, Fall 2015
+<li>
+Michael Sipser, <em><a href="https://math.mit.edu/~sipser/18404/" target="_blank">Introduction to the Theory of Computation</a></em>, Fall 2020 
+<li>
+Luca Trevisan, <em><a href="https://people.eecs.berkeley.edu/~luca/cs172-05/" target="_blank">Computability and Complexity</a></em>, Fall 2005
+<li>
+Jeffrey D. Ullman, <em><a href="http://infolab.stanford.edu/~ullman/ialc/spr10/spr10.html" target="_blank">Introduction to Automata and Complexity Theory</a></em>, Spring 2010
+</ul>
+
+
+<hr width=100%>
+
+<table border=0 width=100%><tr>
+<!--
+<td align=left>
+<p align=left style='font-family: "Trebuchet MS", Helvetica, sans-serif; font-size:10;'>
+modified on 17 Aug 2020
+</p>
+</td>
+-->
+<td align=right style='font-family: "Trebuchet MS", Helvetica, sans-serif; font-size:10; color:gray'>
+last modified on <script type="text/javascript" src="../../last_modified.js"></script><br>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=7378223; 
+var sc_invisible=1; 
+var sc_security="c30d2cf3"; 
+var sc_text=2; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics ecommerce" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/7378223/0/c30d2cf3/0/"
+alt="shopify analytics ecommerce"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+</td>
+</tr></table>
+</body>
+</html>
