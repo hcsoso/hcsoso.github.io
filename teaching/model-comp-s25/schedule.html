@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html>
+<head>
+<title>Theory of Computation (Winter 2021)</title>
+<style type=text/css>
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline;}
+</style>
+<link href="style.css" rel="stylesheet">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+
+<body text=#1C1C1C vLink=#0431B4 link=#0431B4 bgColor=#EFEFFB background="">
+<!--
+<p>
+<table border=0 align=center>
+<tr valign=top style="line-height: 1.2">
+<td width=10></td>
+<td width=600>
+-->
+
+<h1>Theory of Computation</h1>
+<h3>COSC 39, Spring 2025</h3>
+
+<h3 align=right><a href="index.html">Main</a> | Schedule | <a href="homeworks.html">Homeworks</a> | <a href="about.html">About</a></h3>
+
+
+<hr width=100%>
+
+<h2>Course Schedule</h2>
+
+All materials are subject to change based on the actual class interaction and student feedback.
+
+
+<h3>Introduction</h3>
+<dl>
+<dt> 3/31
+<dd>
+<!--
+<div class="floater">
+<a href="figs/jordan-curve.png"><img src="figs/jordan-curve.png" width=144 border=0></a><br>
+<em>When we could be diving for pearls</em><br>
+Fiona Ross, 9 3/4” x 6”, 2011<br>
+Micron ink on Denril paper
+</div>
+-->
+
+administrivia; what is the purpose of this course? knowledge, skill, philosophy
+
+<ul class=sub>
+<li> Useful resources for reviewing prerequisites:
+<ul class=sub>
+  <li> <em>Background knowledge</em>:  <mark>Sipser Chapter 0</mark>
+
+  <li> <em>Induction</em>:  <mark>Erickson <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf" target="_blank">lecture 1</a>, <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/notes/98-induction.pdf" target="_blank">Appendix I</a></mark>
+</ul>
+
+<li> Train your thinking and communication skills in math:
+<ul class=sub>
+  <li> <a href="https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/" target="_blank"><em>There’s more to mathematics than rigour and proofs</em></a> by Terence Tao; here's a <a href="https://www.youtube.com/watch?v=48Hr3CT5Tpk" target="_blank">video</a> if you prefer him talking in person
+
+  <li> <a href="https://terrytao.wordpress.com/advice-on-writing-papers/" target="_blank"><em>On writing</em></a> by Terence Tao
+
+  <li> <a href="https://www.maths.ed.ac.uk/~cbarwick/papers/style.pdf" target="_blank"><em>Notes on mathematical writing</em></a> by Clark Barwick
+
+  <li> <a href="http://www.jamisbuck.org/presentations/rubyconf2011/index.html#title-page" target="_blank"><em>Algorithm is not a four-letter word</em></a> by Jamis Buck
+</ul>
+
+<li> Universal computation and our mind:
+<ul class=sub>
+  <li> <em>Quantum Computing since Democritus</em> by Scott Aaronson.  Entertaining, crisp, and original.  Try to get a copy from the library.
+
+  <li> <a href="https://arxiv.org/abs/1310.3225" target="_blank"><em>A Turing test for free will</em></a> by Seth Lloyd
+
+  <li> <a href="https://www.youtube.com/watch?v=152yq0SPIqk" target="_blank"><em>What Can Theoretical Computer Science Contribute to the Discussion of Consciousness</em></a> by Lenore, Manuel, and Avrim Blum
+</ul>
+
+<li> Why this course?
+<ul class=sub>
+    <li> <a href="https://cstheory.stackexchange.com/a/14818/1800" target="_blank"><em>What is the enlightenment I'm supposed to attain after studying finite automata?</em></a>
+    <li> <a href="https://cstheory.stackexchange.com/q/8539/1800" target="_blank"><em>How practical is Automata Theory?</em></a>
+    </ul>
+
+</ul>
+</dl>
+
+
+<h3>Languages and Machine Models</h3>
+<dl>
+<dt> 4/2
+<dd> languages, problems, and encoding; regular expressions
+    [<a href="scribbles/0111.pdf">scribbles</a>]
+
+    <ul class=sub>
+      <li><mark>Erickson <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf" target="_blank">lecture 2.1–2.3</a></mark>, <mark>Sipser Chapter 1.3 regular expressions</mark>
+    </ul>
+
+<dt> 4/3
+<dd> constructing regular expressions
+    [<a href="practice/0112.pdf">worksheet</a>]
+
+<dt> 4/4
+<dd> finite automata and automatic languages; are they more powerful than regular expressions?
+    [<a href="scribbles/0113.pdf">scribbles</a>]
+
+    <ul class=sub>
+      <li><mark>Erickson <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf" target="_blank">lecture 3.1–3.5</a></mark>, <mark>Sipser Chapter 1.1</mark>
+    </ul>
+
+<dt> 4/7
+<dd> DFA constructions
+    [<a href="practice/0115.pdf">worksheet</a>]
+</dl>
+
+
+<h3>Nondeterminism</h3>
+<dl>
+<dt> 4/9
+<dd> (MLK day; no live lectures) tips on induction
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c7b47bbe-d50a-42a4-8ef6-acb40142f920" target="_blank">video</a>]
+
+    <ul class=sub>
+      <li><mark>Erickson <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf" target="_blank">lecture 3.3</a></mark>; the induction proof for the example there might help you with Homework 1 problem 1.
+    </ul>
+
+<dt> 4/10
+<dd> induction on strings and automata
+[<a href="practice/0119.pdf">worksheet</a>]
+
+<dt> 4/11
+<dd> regular languages are automatic: nondeterministic finite automata
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=faf2d0bf-36ad-4b6d-9c2d-acb6014ad1f1" target="_blank">video</a>|<a href="scribbles/0120.pdf">scribbles</a>]
+
+    <ul class=sub>
+      <li><mark>Erickson <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf" target="_blank">lecture 4.1–4.3, 4.6–4.7</a></mark>, <mark>Sipser Chapter 1.2, 1.3 (Theorem 1.54)</mark>
+    </ul>
+
+<dt> 4/14
+<dd> construting NFAs
+    [<a href="practice/0122.pdf">worksheet</a>]
+</dl>
+
+
+<h3>Beyond Regularity</h3>
+<dl>
+<dt> 4/16
+<dd> Kleene theorem: where multiple models coincide
+[<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=be68d7f2-a9d3-4872-abd5-acbb0144a492" target="_blank">video</a>|<a href="scribbles/0125.pdf">scribbles</a>]
+
+    <ul class=sub>
+      <li><mark>Erickson <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf" target="_blank">lecture 4.4–4.5, 4.8–4.9</a></mark>, <mark>Sipser Chapter 1.2 (Theorem 1.39), 1.3 (Lemma 1.60)</mark>
+    </ul>
+
+<dt> 4/17
+<dd> language transformations and closure properties
+    [<a href="practice/0126.pdf">worksheet</a>]
+
+<dt> 4/18
+<dd> limits of regularity: fooling sets and Myhill-Nerode theorem; examples of nonregular languages
+[<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c6bd9ad3-350d-4b62-bc3c-acbd014842d7" target="_blank">video</a>|<a href="scribbles/0127.pdf">scribbles</a>]
+
+    <ul class=sub>
+      <li><mark>Erickson <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf" target="_blank">lecture 3.8–3.9</a></mark>
+    </ul>
+
+<dt> 4/21
+<dd> fooling set constructions
+    [<a href="practice/0129.pdf">worksheet</a>]
+</dl>
+
+
+
+<h3>Turing Machines and Decidability</h3>
+<dl>
+<dt> 4/23
+<dd> Turing machine: it's just CPU with memory
+    <!-- Random Access Memory -->
+[<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6c216f6e-7868-4131-88cd-acc20159e2d8" target="_blank">video</a>|<a href="scribbles/0201.pdf">scribbles</a>]
+
+<ul class=sub>
+    <li><mark>Erickson <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf" target="_blank">lecture 6.1–6.7</a></mark>, <mark>Sipser Chapter 3</mark>
+
+    <li> The Wikipedia page for the <a href="https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis" target="_blank">Church–Turing thesis</a> is surprisingly detailed
+
+    <li> Things equivalent to Turing machines:
+    <ul class=sub>
+      <li> <a href="https://www.youtube.com/watch?app=desktop&v=hsXpLx4soQY" target="_blank">Baba Is You</a>
+      <li> <a href="https://www.ics.uci.edu/~welling/teaching/271fall09/Turing-Machine-Life.pdf" target="_blank">Game of Life</a>
+      <li> <a href="https://www.youtube.com/watch?v=pdmODVYPDLA" target="_blank">Magic: The Gathering</a>
+      <li> <a href="https://www.youtube.com/watch?v=_3loq22TxSc" target="_blank">Powerpoint</a> (Tom Wildenhain is the only person qualified to put Powerpoint under <em>Programming Languages</em> section in his CV.)
+      <li> <a href="https://www.youtube.com/watch?v=SbO0tqH8f5I" target="_blank">Minecraft</a> (not surprisingly; but look at its spec/speed!)
+      <li> <a href="https://www.youtube.com/watch?v=R7EEoWg6Ekk" target="_blank"><em>One single</em> x86 instruction</a> (All the other instructions are fluff! ... and of course, somebody use it to run <a href="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom" target="_blank">Doom</a>)
+      <li> ... and <a href="http://beza1e1.tuxen.de/articles/accidentally_turing_complete.html" target="_blank">many</a> <a href="https://www.gwern.net/Turing-complete" target="_blank">more</a>
+    </ul>
+
+    <li> Inception:
+    <ul class=sub>
+      <li> <a href="https://www.youtube.com/watch?v=xP5-iIeKXE8" target="_blank">Game of Life</a>
+    </ul>
+
+</ul>
+
+<dt> 4/24
+<dd> Equivalence between different computing devices
+    [<a href="practice/0202.pdf">worksheet</a>]
+
+<dt> 4/25
+<dd> Church-Turing thesis: CPU with memory <em>is</em> universal computation; universality implies incomputability (oh the irony)
+    <!-- code is data; why we need simplicity -->
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a3d6f215-5537-4a02-9fe8-acc401461ffb" target="_blank">video</a>|<a href="scribbles/0203.pdf">scribbles</a>]
+
+<ul class=sub>
+    <li><mark>Erickson <a href="https://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf" target="_blank">lecture 6.8, 7.5–7.8</a></mark>, <mark>Sipser Chapter 4</mark>
+
+    <li> Can you write a program that output the source code of itself?
+    <ul class=sub>
+      <li> Wikipedia page on <a href="https://en.wikipedia.org/wiki/Quine_(computing)" target="_blank">Quine</a>
+      <li> <a href="http://www.madore.org/~david/computers/quine.html" target="_blank">Quines (self-replicating programs)</a>
+    </ul>
+
+    <li> On halting problem and imcompleteness theorems
+    <ul class=sub>
+      <li> <a href="https://www.scottaaronson.com/democritus/lec3.html" target="_blank">Gödel, Turing, and Friends</a>
+      <li> <a href="https://www.scottaaronson.com/blog/?p=710" target="_blank">Rosser’s Theorem via Turing machines</a>
+      <li> <a href="http://www.ams.org/notices/201011/rtx101101454p.pdf" target="_blank">The Surprise Examination Paradox and the Second Incompleteness Theorem</a>
+    </ul>
+</ul>
+
+<dt> 4/28
+<dd> Is my pseudocode safe?
+    <!-- hint to undecidable languages -->
+    [<a href="practice/0205.pdf">worksheet</a>]
+</dl>
+
+
+<h3>Resources and Verification</h3>
+<dl>
+<dt> 4/30
+<dd> Time complexity, verification and nondeterminism, P vs NP
+        <!-- where the simplicity of machine model shines -->
+[<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=46647d76-2ab4-4f06-87a9-acc9014fc7bc" target="_blank">video</a>|<a href="scribbles/0208.pdf">scribbles</a>]
+
+
+<ul class=sub>
+    <li><mark>Erickson <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf" target="_blank">chapter 12.1–12.2</a></mark>, <mark>Sipser Chapter 7.1–7.3</mark>
+</ul>
+
+<dt> 5/1
+<dd> <b>Midterm 1</b>; <em>no working session today</em>
+
+<dt> 5/2
+<dd> NP-hardness and Cook-Levin theorem: no pursuit is useless; mapping and oracle reductions
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8f61dc65-79dd-45ad-8c0a-accb0148e1ff" target="_blank">video</a>|<a href="scribbles/0210.pdf">scribbles</a>]
+
+<ul class=sub>
+    <li><mark>Erickson <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf" target="_blank">chapter 12.3–12.6</a></mark>, <mark>Sipser Chapter 7.4</mark>
+</ul>
+
+<dt> 5/5
+<dd> Self-reductions
+    [<a href="practice/0212.pdf">worksheet</a>]
+</dl>
+
+<h3>Reductions</h3>
+<dl>
+<dt> 5/7
+<dd> NP-hardness reductions
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1ac59b5b-a1ad-4db6-9313-acd001494d91" target="_blank">video</a>|<a href="scribbles/0215.pdf">scribbles</a>]
+
+<ul class=sub>
+    <li><mark>Erickson <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/book/12-nphard.pdf" target="_blank">chapter 12.6–12.10</a></mark>, <mark>Sipser Chapter 7.5</mark>
+
+    <li> There are so much resourses online about NP-hardness I can't even.  But here's a few that I find extra helpful:
+    <ul class=sub>
+      <li><mark><a href="https://www.youtube.com/watch?v=mr1FMrwi6Ew" target="_blank">Lecture</a> by Erik Demaine from MIT, including a proof that Super Mario Bros. is NP-hard (and a few other problem we didn't cover in class).</mark>
+      <li> <a href="https://www.youtube.com/watch?v=YX40hbAHx3s" target="_blank">P vs. NP and the Computational Complexity Zoo</a>
+      <li> <a href="https://www.youtube.com/watch?v=HhGI-GqAK9c" target="_blank">SIGBOVIK 2007: Generalized Super Mario Bros. is NP-Complete</a>.  Super Mario BROOOOOOS.
+    </ul>
+</ul>
+
+<dt> 5/8
+<dd> More NP-hardness reductions
+    [<a href="practice/0216.pdf">worksheet</a>]
+
+<dt> 5/9
+<dd> Exponential-time hypotheses: No, I mean they are <em>really really</em> hard
+    <!-- building algorithm is proving hardness -->
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aaa036c8-f545-4083-86fc-acd20146c6f8" target="_blank">video</a>|<a href="scribbles/0217.pdf">scribbles</a>]
+
+<ul class=sub>
+    <li> Fine-grained complexity:
+    <ul class=sub>
+      <li> <mark><a href="https://people.csail.mit.edu/virgi/6.s078/" target="_blank">Fine-Grained Algorithms and Complexity</a> by the Williams at MIT.  A full semester course on fine-grained complexity.</mark>
+      <li> <a href="https://simons.berkeley.edu/programs/complexity2015" target="_blank">Fine-Grained Complexity and Algorithm Design</a>, held between Aug 19 – Dec 18, 2015 at Simons Institute.  Lots of good talks!
+      <li><a href="http://dl.icdst.org/pdfs/files3/5ffd825d2455e917c91ea831083a165e.pdf" target="_blank">On some fine-grained questions in algorithms and complexity</a> by Virginia Vassilevska Williams
+      <li> <a href="http://www.cs.bme.hu/~dmarx/papers/survey-eth-beatcs.pdf" target="_blank">Lower bounds based on the Exponential Time Hypothesis</a> by Daniel Lokshtanov, Dániel Marx, and Saket Saurabh
+      <li> <a href="https://www.youtube.com/watch?v=VdnTViVp-JY" target="_blank">Hypotheses about Satisfiability and their Consequences</a> by Russell Impagliazzo (Yes, the one who came up with ETH and SETH), streamed on Feb 11, 2021 (last week!)
+    </ul>
+</ul>
+
+
+<dt> 5/12
+<dd> (S)ETH reductions
+    [<a href="practice/0219.pdf">worksheet</a>]
+</dl>
+
+
+<h2>Advanced topics</h2>
+
+<h3>Randomness</h3>
+<dl>
+<dt> 5/14
+<dd> Randomized algorithm, BPP, and error reduction; polynomial identity testing
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e476e7a2-91e6-4ed2-bf7c-acd701462189" target="_blank">video</a>|<a href="scribbles/0222.pdf">scribbles</a>]
+
+<ul class=sub>
+    <li> References for randomized algorithm:
+    <ul class=sub>
+        <li> <mark><a href="https://people.eecs.berkeley.edu/~luca/cs174/" target="_blank">Randomized Algorithms</a> by Luca Trevisan, Lecture 12</mark>
+        <li> Randomized Algorithms by Motwani and Raghavan, Chapter 7.1–7.6
+
+    </ul>
+</ul>
+
+
+<dt> 5/15
+<dd> Fingerprinting
+    [<a href="practice/0223.pdf">worksheet</a>]
+
+<dt> 5/16
+<dd> Pseudorandom generators; hardness is pseudorandomness
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0d000b0a-d5ed-4398-aa91-acd9014c6570" target="_blank">video</a>|<a href="scribbles/0224.pdf">scribbles</a>]
+
+<ul class=sub>
+    <li> <a href="https://ocw.mit.edu/courses/mathematics/18-405j-advanced-complexity-theory-spring-2016/lecture-notes/" target="_blank">Advanced Complexity Theory</a> by Dana Moshkovitz, Lecture 20–22
+    <li> <a href="http://theory.cs.princeton.edu/complexity/book.pdf" target="_blank">Computational Complexity: A Modern Approach</a> by Sanjeev Arora and Boaz Barak, Chapter 16.1–16.3
+    <li> <a href="https://www.maa.org/sites/default/files/images/upload_library/22/Polya/07468342.di020742.02p0021g.pdf" target="_blank">The longest run of heads</a> by Mark Schilling
+    <li> <a href="https://web.media.mit.edu/~guysatat/MindReader/index.html" target="_blank">The Mind Reader Game</a>, implemented by by Guy Satat and Ramesh Raskar.  Can you beat the computer consistently?
+</ul>
+
+
+<dt> 5/19
+<dd> Have fun with randomness
+    [<a href="practice/0226.pdf">worksheet</a>]
+</dl>
+
+<h3>Communication</h3>
+<dl>
+<dt> 5/21
+<dd> Interactive proofs: why talking to people is important
+    <!-- five worlds? -->
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ea73d72b-0740-443d-8848-acde017531d6" target="_blank">video</a>|<a href="scribbles/0301.pdf">scribbles</a>]
+
+<ul class=sub>
+    <li class=emph> <a href="http://theory.cs.princeton.edu/complexity/book.pdf" target="_blank">Computational Complexity: A Modern Approach</a> by Sanjeev Arora and Boaz Barak, Chapter 8.1–8.3, 8.5
+</ul>
+
+<dt> 5/22
+<dd> <b>Midterm 2</b>; <em>no working session today</em>
+
+<dt> 5/23
+<dd> Interactive proof for #P; Cryptography: one-time pad and commitment scheme
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=da08dc01-cd92-4d06-9c3b-ace001479ca0" target="_blank">video</a>|<a href="scribbles/0303.pdf">scribbles</a>]
+
+<ul class=sub>
+    <li><mark>Sipser Chapter 10.4</mark>
+    <li><mark><a href="http://theory.cs.princeton.edu/complexity/book.pdf" target="_blank">Computational Complexity: A Modern Approach</a> by Sanjeev Arora and Boaz Barak, Chapter 8.5</mark>
+    <li><mark><a href="http://www.wisdom.weizmann.ac.il/~naor/PAPERS/bit.pdf" target="_blank">Bit Commitment Using Pseudo-Randomness</a> by Moni Naor</mark>
+
+    <li> Ciphers:
+    <ul class=sub>
+        <li> <a href="https://www.douglas.stebila.ca/teaching/visual-one-time-pad/" target="_blank">Visual one-time pad</a>
+        <li> <a href="http://users.telenet.be/d.rijmenants/en/onetimepad.htm" target="_blank">One-time Pad</a> by Dirk Rijmenants
+    </ul>
+</ul>
+
+<dt> 5/26
+<dd> turn everything into polynomials
+    [<a href="practice/0305.pdf">worksheet</a>]
+</dl>
+
+<h3>Onward!</h3>
+<dl>
+<dt> 5/28
+<dd> Zero-knowledge proofs and secure computations
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5c684429-c7d2-446f-858b-ace50145fe5e" target="_blank">video</a>|<a href="scribbles/0308.pdf">scribbles</a>]
+
+<ul class=sub>
+    <li><mark><a href="http://www.cs.cmu.edu/~ryanw/crypto/lec1.pdf" target="_blank">Theoretical Cryptography, Lecture 1</a> by Manuel Blum</mark>
+    <li><a href="http://www.cs.mun.ca/~kol/courses/6743-w15/papers/russell-fiveworlds.pdf" target="_blank">A Personal View of Average-Case Complexity</a> by Russell Impagliazzo, 1995
+
+    <li> Zero-knowledge proofs:
+    <ul class=sub>
+        <li><a href="https://hackernoon.com/eli5-zero-knowledge-proof-78a276db9eff" target="_blank">Zero Knowledge Proof: ELI5 (Halloween Ed.)</a> by Hackernoon
+        <li><a href="https://www.youtube.com/watch?v=5ovdoxnfFVc" target="_blank">Zero Knowledge Proof</a> by Numberphile
+    </ul>
+</ul>
+
+<dt> 5/29
+<dd> Fun with zero-knowledge proofs
+    [<a href="practice/0309.pdf">worksheet</a>]
+
+<dt> 5/30
+<dd> How does new discovery (like quantum physics and time travel) change our perspective of computation?
+    [<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=166c2bd6-d5ea-47df-b41d-ace70142d95f" target="_blank">video</a>|<a href="scribbles/0310.pdf">scribbles</a>]
+    <!--
+    busy beaver: https://www.scottaaronson.com/papers/bb.pdf
+    https://www.scottaaronson.com/writings/bignumbers.html
+    no time for: machine learning
+    -->
+
+<ul class=sub>
+    <li><mark><a href="https://www.scottaaronson.com/democritus/lec19.html" target="_blank">Quantum Computing Since Democritus, Lecture 19: Time Travel</a> by Scott Aaronson</mark>
+    <li><a href="https://www.hpmor.com/chapter/17" target="_blank">Harry Potter and the Methods of Rationality, Chapter 17</a> by Eliezer Yudkowsky, 2010–2015
+    <li><a href="https://www.scottaaronson.com/papers/ctc.pdf" target="_blank">Closed Timelike Curves Make Quantum and Classical Computing Equivalent</a> by Scott Aaronson and John Watrous, 2008
+
+    <li> Quantum Computing
+    <ul class=sub>
+        <li><a href="https://www.scottaaronson.com/democritus/lec19.html" target="_blank">Quantum Computing Since Democritus, Lecture 9–10</a> by Scott Aaronson
+        <li> <a href="http://theory.cs.princeton.edu/complexity/book.pdf" target="_blank">Computational Complexity: A Modern Approach</a> by Sanjeev Arora and Boaz Barak, Chapter 20
+        <li class=emph> <a href="http://www.henryyuen.net/post/alice-and-bob-visit/" target="_blank">A visit from Alice and Bob</a> by Henry Yuen; an amusing story about the breakthrough result MIP* = RE
+        <li> <a href="https://quantumfrontiers.com/2020/03/01/the-shape-of-mip-re/" target="_blank">The shape of MIP* = RE</a> by Henry Yuen
+    </ul>
+</ul>
+
+</dl>
+
+
+<dl>
+<dt> 6/2 
+<dd> [TBD]
+</dl>
+
+
+<hr width=100%>
+
+<table border=0 width=100%><tr>
+<!--
+<td align=left>
+<p align=left style='font-family: "Trebuchet MS", Helvetica, sans-serif; font-size:10;'>
+modified on 17 Aug 2020
+</p>
+</td>
+-->
+<td align=right style='font-family: "Trebuchet MS", Helvetica, sans-serif; font-size:10; color:gray'>
+last modified on <script type="text/javascript" src="../../last_modified.js"></script><br>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=7378223;
+var sc_invisible=1;
+var sc_security="c30d2cf3";
+var sc_text=2;
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics ecommerce" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/7378223/0/c30d2cf3/0/"
+alt="shopify analytics ecommerce"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+</td>
+</tr></table>
+</body>
+</html>
