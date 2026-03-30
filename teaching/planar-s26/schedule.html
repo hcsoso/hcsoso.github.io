@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<html>
+<head>
+<title>All about Planar Graphs (Spring 2026)</title>
+<style type=text/css>
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline;}
+</style>
+<link href="style.css" rel="stylesheet">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+
+<body text=#1C1C1C vLink=#0431B4 link=#0431B4 bgColor=#EFEFFB background="">
+<!--
+<p>
+<table border=0 align=center>
+<tr valign=top style="line-height: 1.2">
+<td width=10></td>
+<td width=600>
+-->
+
+<h1>All about Planar Graphs</h1>
+<h3>COSC 149.12, Spring 2026</h3>
+
+<h3 align=right><a href="index.html">Main</a> | Schedule | <a href="homeworks.html">Homeworks</a> | <a href="about.html">About</a></h3>
+
+
+<hr width=100%>
+
+<h2>Course Schedule</h2>
+
+All materials are subject to change based on the actual class interaction and student feedback.
+
+
+<h3>Basics</h3>
+
+<dl>
+    <dt> Mar 30
+    <dd>
+
+    <!--
+    <div class="floater">
+    <a href="figs/jordan-curve.png"><img src="figs/jordan-curve.png" width=144 border=0></a><br>
+    <em>When we could be diving for pearls</em><br>
+    Fiona Ross, 2011<br>
+    9 3/4” x 6”<br>
+    Micron ink on Denril paper
+    </div>
+    -->
+
+        why are we here, overview; Euler formula, crossing lemma
+        <!--[<a href="https://dartmouth.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=38d3391a-ad0f-42bd-b76f-ada301577bbe" target="_blank">lecture video</a>|<a href="slides/0914.pdf">annotated slides</a>]-->
+    <dd>
+        <ul class=sub>
+        <li>
+        <mark><a href="https://e.math.cornell.edu/people/mann/classes/chicago/Lakatos.pdf"
+            target="_blank">Proofs and Refutations, Imre Lakatos.</a></mark> 
+            We have not formally proven Euler's formula today.  But what constitutes a proof?
+        <!--<li>
+        <mark><a href="https://ocw.mit.edu/courses/18-217-graph-theory-and-additive-combinatorics-fall-2019/4ed20fca799dd49814d5f8eaad6aac11_MIT18_217F19_ch8.pdf"
+            target="_blank">The sum-product problem,  Yufei Zhao.</a></mark>  This lecture notes talks about the crossing lemma and a surprising application in additive combinatorics.-->
+    
+    </ul>
+
+    <dt> Apr 01
+    <dd>
+        rotation system, duality, tree-cotree decomposition; Lipton-Tarjan path separator, cycle separator
+    <dd>
+    <ul class=sub>
+    <li>
+        <mark><a href="https://jeffe.cs.illinois.edu/teaching/comptop/2017/chapters/02-planar-graphs.pdf"
+                target="_blank">Erickson Chap 2.1-2.2, 2.6-2.7</a></mark>
+    <li>
+        <mark><a href="https://jeffe.cs.illinois.edu/teaching/comptop/2023/notes/14-planar-separators.pdf"
+                target="_blank">Erickson 14.1-14.4</a></mark>
+    <li>
+        <a href="papers/Edmonds1960.pdf"
+                target="_blank">A combinatorial representation for oriented polyhedral surfaces, JR Edmond, 1960.</a>  This is Edmond's MA thesis, in which the notion of rotation system first came up.
+    </ul>
+</dl>
+
+
+<h3>Combinatorial Representations</h3>
+
+<dl>
+    <dt> Apr 06
+    <dd>
+        surface, curvature, discrete Gauss-Bonnet; Steinitz theorem, Cauchy rigidity theorem
+
+    <dd>
+        <ul class=sub>
+        <li><a href="https://jeffe.cs.illinois.edu/pubs/pdf/dehn.pdf"
+                target="_blank">Transforming Curves on Surfaces Redux by Jeff Erickson and Kim Whittlesey</a> includes a proof to the combinatorial Gauss-Bonnet theorem.  
+                Section 4.3 of the <a href="https://jeffe.cs.illinois.edu/pubs/pdf/dehn.pdf" target="_blank">lecture notes by Lazarus and de Mesmay</a> deals with the case when the (discrete) surface has holes.
+
+        <li><a href="https://link.springer.com/chapter/10.1007/978-3-642-00856-6_13" target="_blank">Proofs from THE BOOK by Aigner and Ziegler</a> has a chapter on Cauchy rigidity theorem; but it is missing the crucial part of the proof that there is a vertex where signs changes less than 4 times around it. 
+        <a href="https://courses.csail.mit.edu/6.849/fall10/lectures/L14.pdf" target="_blank"> Eric Demaine's proof</a> is fine, but not enough intuition for me.  
+        His <a href="https://gfalop.org/" target="_blank">book on Geometric Folding Algorithms</a> with Joseph O'Rourke is pretty though.
+        </ul>
+
+    <dt> Apr 08
+    <dd>
+        medial and radial graphs, quadrangulations; discrete metric, homotopy and electrical moves
+    
+    <dd>
+        <ul class=sub>
+            <li><a href="https://jeffe.cs.illinois.edu/teaching/comptop/2017/chapters/06-combinatorial-surfaces.pdf"
+                    target="_blank">Erickson Chap 6.5</a> talks about medial and radial construction (and other derived
+                maps). It's hard to find a good modern reference.
+    
+            <li><a href="https://hcsoso.github.io/papers/pdf/thesis.pdf" target="_blank">My thesis!</a> Lemma 2.1 provided a
+                proof to the bigon reduction. You can find a few reference from the paragraph, including Gilmer-Litherland
+                which is also relevant to the lattice theorem in the next lecture.
+        </ul>
+        
+    <dt> Apr 13
+    <dd>
+        Schnyder woods, canonical ordering, barycentric coordinates and grid embedding; α-oritentations and their distributive lattice structure
+
+    <dd>
+    <ul class=sub>
+        <li><mark><a href="https://jeffe.cs.illinois.edu/teaching/comptop/2023/notes/11-straight-line-planar.pdf"
+                target="_blank">Erickson note 11, 2023 </a></mark>
+        <li><a href="https://www2.cs.arizona.edu/~kobourov/schnyder.pdf"
+                target="_blank">Canonical Orders and Schnyder
+                Realizers by Stephen Kobourov</a> talks about equivalence to canonical / shelling order
+        <li><mark><a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v11i1r15"
+                    target="_blank">Lattice Structures from Planar Graphs by Felsner, 2004.</a>  This paper proofs that α-orientations form a distributive lattice in plane graphs.
+        </mark>
+    </ul>
+
+</dl>
+
+
+<h3>Topological Graph Theory</h3>
+
+<dl>
+    <dt> Apr 15
+    <dd>
+        graph minors, Kuratowski-Wagner theorem, treewidth, planar grid-minor theorem; non-surface feature, RS structure
+        theorem
+
+    <dt> Apr 20
+    <dd>
+        minor-free graphs are like planar graphs: Alon-Seymour-Thomas separator, sparsity bound
+</dl>
+
+
+<h3>Physical Representations</h3>
+
+<dl>
+    <dt> Apr 22
+    <dd>
+        Tutte drawing, Laplacian, energy minimization; Tutte's spring embedding theorem,  Whitney uniqueness theorem
+    <dd>
+    <ul class=sub>
+        <li><mark><a href="https://jeffe.cs.illinois.edu/teaching/comptop/2023/notes/12-spring-embedding.pdf"
+                target="_blank">Erickson note 12, 2023 </a></mark>
+        <li>Graphs and Geometry by Laszlo Lovasz, Chapter 3.1, 3.2.1
+    </ul>
+
+
+    <dt> Apr 27
+    <dd>
+        tensegrity framework and stresses, reciprocal diagrams, polyhedral lifts, Cremona-Maxwell equivalence; weighted Delaunay graph and power diagram
+    <dd>
+    <ul class=sub>
+        <li><mark><a href="https://jeffe.cs.illinois.edu/teaching/comptop/2023/notes/12a-Maxwell-Cremona.pdf"
+                target="_blank">Erickson note 12a, 2023 </a></mark>
+        <li>Graphs and Geometry by Laszlo Lovasz, Chapter 3.2.2
+        <li><a href="https://donsheehy.net/courses/comp_geom/2014_fall/index.html"
+                target="_blank">Don Sheehy notes, Fall 2014.</a>
+    </ul>
+</dl>
+
+
+<h3>Riemannian Representations</h3>
+
+<dl>
+    <dt> Apr 29
+    <dd>
+        Koebe-Andreev-Thurston disk-packing, simultaneous orthogonal drawings, cycle separator from disk packing
+    <dd>
+    <ul class=sub>
+        <li><mark><a href="https://page.mi.fu-berlin.de/rote/Papers/pdf/On+primal-dual+circle+representations.pdf" target="_blank">On Primal-Dual Circle Representations</a>, Felsner and Rote, SOSA 2019</mark>
+        <li><mark><a href="https://people.cs.umass.edu/~mahadeva/cs791bb/reading/geommain.pdf" target="_blank"> Geometric Representations of Graphs</a>, Laszlo Lovasz, Chapter 6.1.</mark> This is a draft of the book below, but with the topological argument for existence of radii, instead of the current analytic one, or the algorithmic one from Felsner-Rote. 
+        <li>Graphs and Geometry by Laszlo Lovasz, Chapter 5.1-5.2
+    </ul>
+
+    <dt> May 04
+    <dd>
+        Cheeger inequality, 2nd eigenvalue of Planar Graphs through disk packing; spectral cuts
+        <dd>
+    <ul class=sub>
+        <li><mark><a href=""
+                target="_blank">Erickson note 12a, 2023 </a></mark>
+        <li>Graphs and Geometry by Laszlo Lovasz, Chapter 5.3-5.5
+        <li><a href="https://sarielhp.org/book/chapters/separator.pdf"
+                target="_blank">Har-Peled note 16, 2022.</a>An easy way to get separator from circle packing.
+        <li><a href="https://theobtusegeometer.com/2020/04/08/installing-koebepy/"
+                target="_blank">koebepy by John C. Bowers.</a> Circle packing app on Jupyter notebook.
+        <li><a href="https://viterbi-web.usc.edu/~shanghua/teaching/Fall2023-670/SpielmanTengSpectral.pdf"
+                target="_blank">Spectral partitioning works: Planar graphs and finite element meshes by Spielman and Teng, 2007</a> The original proof that second eigenvalue of planar graph is small.  
+        See also the <a href="https://www.cs.yale.edu/homes/spielman/561/" target="_blank">lecture notes by Spielman.</a>
+        <li><a href="https://theory.epfl.ch/courses/topicstcs/Lecture5.pdf"
+                target="_blank">Algorithmic proof of the Cheeger inequality by la Svensson.</a>
+        <li><a href="http://www.circlepack.com/"
+                target="_blank">Ken Stephenson webpage.</a> The OG circle packing guy, with this <a href="https://web.math.utk.edu/~kens/Notices_article.pdf"
+                target="_blank">AMS article</a>.
+    </ul>
+</dl>
+
+
+<h3>Algebraic Representations</h3>
+
+<dl>
+    <dt> May 06
+    <dd>
+        weak and strong Hanani-Tutte theorems, poly-time LP planarity testing; 
+
+    <dt> May 11
+    <dd>
+        Colin de Verdiere invariant, SDP, max-cut
+</dl>
+
+
+<h3>Geometric Intersection Graphs</h3>
+
+<dl>
+    <dt> May 13
+    <dd>
+        pseudodisks, planar support, union complexity
+
+    <dt> May 18
+    <dd>
+        complexity of low-ply system through sampling;
+        clique-based separators, geodesic disks in polygons 
+
+    <dt> May 20
+    <dd>
+        VC-dimesion of geometric objects, distance VC-dimension
+</dl>
+
+<dl>
+
+
+    <dt> May 25
+    <dd>
+        [No class today]
+
+</dl>
+
+<h3>Misc.</h3>
+
+<dl>
+    <dt> May 27
+    <dd>
+        Sperner's lemma, strong product theorem, bounded queue number; grid-tree, cop-decomposition
+
+    <dt> Jun 01
+    <dd>
+        [TBD]
+</dl>
+
+
+
+<!--
+<h3>Misc.</h3>
+
+shortest-path separator, ε-covers, distance oracle;
+low-diameter and padded decomposition,
+Klein-Plotkin-Rao iterative layered decomposition
+
+        coloring, degeneracy, arboricity, sparsity; shallow minors, bounded expansion, polynomial expansion and small separator
+
+<dl>
+    <dt> 11/12
+    <dd>
+        Baker's layering, treewidth-diameter property, contraction decomposition, bidimensionality; 
+        grid-tree, cop-decomposition, tree covers
+
+    <dt> 11/14
+    <dd>
+        Monge property, VC-dimesion of geometric objects, distance VC-dimension
+    
+    <dt> 11/19
+    <dd>
+        beyond planarity: k-planar, k-quasi-planar;
+        string graphs, separator via L1-embedding
+
+</dl>
+-->
+
+<hr width=100%>
+
+
+<h2>Topics we might not get to cover</h2>
+
+The list is <em>no where near</em> exhaustive and is biased towards my personal interests.<br>
+Maybe some of them next time in a special topics course.  Just maybe.
+
+<dl>
+<dt> <em></em>
+<dd> <em>low-distortion routing</em>: multi-commodity flows, L1 embeddings, planar embedding conjecture
+<dd> <em>topology of graphs</em>: planar covers and Negami 1-2-infinity conjecture, theory of almost-planar graphs
+<dd> <em>linkage and folding</em>: universality linkage theorem Alexandrov's theorem
+<dd> <em>planar graph algorithms</em>: disjoint paths, multi-terminal flows and cuts, diameter, matchings, distance oracles
+<dd> <em>graph drawing</em>: clustered planarity, upward planarity
+<dd> <em>planarity testing</em>: SPQR tree
+<dd> <em>new tools</em>: twin-width
+</dl>
+
+
+<hr width=100%>
+
+<table border=0 width=100%><tr>
+<!--
+<td align=left>
+<p align=left style='font-family: "Trebuchet MS", Helvetica, sans-serif; font-size:10;'>
+modified on 17 Aug 2020
+</p>
+</td>
+-->
+<td align=right style='font-family: "Trebuchet MS", Helvetica, sans-serif; font-size:10; color:gray'>
+last modified on <script type="text/javascript" src="../../last_modified.js"></script><br>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=7378223;
+var sc_invisible=1;
+var sc_security="c30d2cf3";
+var sc_text=2;
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics ecommerce" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/7378223/0/c30d2cf3/0/"
+alt="shopify analytics ecommerce"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+</td>
+</tr></table>
+</body>
+</html>
